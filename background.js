@@ -15,5 +15,8 @@ chrome.commands.onCommand.addListener(function(command) {
     if(command === "back") {
        currentIndex -= 1;
        Clipboard.copy(clipboardList[currentIndex]);
+    }else if(command === "forward") {
+       currentIndex += 1;
+       Clipboard.copy(clipboardList[currentIndex]);
     }
 });

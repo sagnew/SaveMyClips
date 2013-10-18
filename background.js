@@ -10,3 +10,10 @@ chrome.extension.onRequest.addListener(
         }
         sendResponse({});
 });
+
+chrome.commands.onCommand.addListener(function(command) {
+    if(command === "back") {
+       currentIndex -= 1;
+       Clipboard.copy(clipboardList[currentIndex]);
+    }
+});

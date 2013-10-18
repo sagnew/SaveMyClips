@@ -21,5 +21,13 @@
     },
     "background": {
         "scripts": ["background.js", "clipboard.js"]
+    },
+    "commands": {
+        "back": {
+            "suggested_key": {
+                "default": "Ctrl+1",
+            },
+            "description": "Allows the user to go to the previous clipboard item."
+        }
     }
 }

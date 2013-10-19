@@ -28,6 +28,12 @@
                 "default": "Alt+O"
             },
             "description": "Allows the user to go to the previous clipboard item."
+        },
+        "forward": {
+            "suggested_key": {
+                "default": "Alt+P"
+            },
+            "description": "Allows the user to go to the next clipboard item."
         }
     }
 }

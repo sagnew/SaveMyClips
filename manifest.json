@@ -25,7 +25,7 @@
     "commands": {
         "back": {
             "suggested_key": {
-                "default": "Ctrl+1",
+                "default": "Alt+O"
             },
             "description": "Allows the user to go to the previous clipboard item."
         }

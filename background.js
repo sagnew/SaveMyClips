@@ -10,6 +10,9 @@ var showNotification = function(displayText){
         displayText
     );
     notify.show();
+    setTimeout(function () {
+        notify.close();
+    }, 2000);
 }
 
 chrome.extension.onRequest.addListener(

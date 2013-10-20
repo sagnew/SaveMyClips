@@ -7,7 +7,8 @@
 
     "permissions": [
         "clipboardWrite",
-        "clipboardRead"
+        "clipboardRead",
+        "notifications"
         ],
     "content_scripts": [
         {

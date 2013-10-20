@@ -12,10 +12,14 @@ chrome.extension.onRequest.addListener(
 
 chrome.commands.onCommand.addListener(function(command) {
     if(command === "back") {
-        currentIndex -= 1;
+        if(currentIndex > 0){
+            currentIndex -= 1;
+        }
         Clipboard.copy(clipboardList[currentIndex]);
     }else if(command === "forward") {
-        currentIndex += 1;
+        if(currentIndex < clipboardList.length - 1){
+            currentIndex += 1;
+        }
         Clipboard.copy(clipboardList[currentIndex]);
     }
 });

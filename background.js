@@ -18,8 +18,10 @@ var showNotification = function(displayText){
 chrome.extension.onRequest.addListener(
     function(request, sender, sendResponse) {
         if (request.event == "copy") {
-            clipboardList.push(Clipboard.paste());
-            currentIndex = clipboardList.length - 1;
+            setTimeout(function () {
+                clipboardList.push(Clipboard.paste());
+                currentIndex = clipboardList.length - 1;
+            }, 100);
         }
         sendResponse({});
 });

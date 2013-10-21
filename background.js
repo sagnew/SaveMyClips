@@ -1,4 +1,4 @@
-var clipboardList = [];
+var clipboardList = [Clipboard.paste()];
 var currentIndex = 0, notificationID = -1;
 var showNotification = function(displayText){
     if(notificationID !== -1){

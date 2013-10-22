@@ -1,5 +1,6 @@
 var clipboardList = [Clipboard.paste()];
 var currentIndex = 0, notificationID = -1;
+
 var showNotification = function(displayText){
     if(notificationID !== -1){
         //clear previous notification
@@ -31,13 +32,17 @@ chrome.commands.onCommand.addListener(function(command) {
         if(currentIndex > 0){
             currentIndex -= 1;
         }
-        Clipboard.copy(clipboardList[currentIndex]);
-        showNotification(Clipboard.paste());
+        if(clipboardList.length > 0){
+            Clipboard.copy(clipboardList[currentIndex]);
+            showNotification(Clipboard.paste());
+        }
     }else if(command === "forward") {
         if(currentIndex < clipboardList.length - 1){
             currentIndex += 1;
         }
-        Clipboard.copy(clipboardList[currentIndex]);
-        showNotification(Clipboard.paste());
+        if(clipboardList.length > 0){
+            Clipboard.copy(clipboardList[currentIndex]);
+            showNotification(Clipboard.paste());
+        }
     }
 });

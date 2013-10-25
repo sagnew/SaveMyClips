@@ -13,7 +13,7 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["copylisten.js"]
+            "js": ["scripts/copylisten.js"]
         }
     ],
     "browser_action": {
@@ -21,7 +21,7 @@
         "default_popup": "display.html"
     },
     "background": {
-        "scripts": ["clipboard.js", "background.js"]
+        "scripts": ["scripts/clipboard.js", "scripts/background.js"]
     },
     "commands": {
         "back": {

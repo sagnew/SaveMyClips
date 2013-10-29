@@ -6,7 +6,7 @@ var showNotification = function(displayText){
         //clear previous notification
     }
     var notify = webkitNotifications.createNotification(
-        'icon.png',
+        '',
         'New clipboard data:',
         displayText
     );
